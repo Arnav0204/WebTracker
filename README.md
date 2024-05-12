@@ -16,3 +16,6 @@ Web Tracker is a browser extension that helps you monitor and manage your time s
 8. Enable developer mode.
 9. Click on "Load unpacked" and browse your root directory.
 10. You can now use this extension locally.
+
+## Flow Graph
+ ![Example Image](images/example.jpg)
