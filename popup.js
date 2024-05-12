@@ -16,6 +16,28 @@ const blockedWebsiteButton = document.getElementById('blocked-website-button');
 const browsingDataButton = document.getElementById('browsing-data-button');
 const browsingDataList = document.getElementById('browsing-data-list');
 
+// Show/hide different sections
+dashboardLink.addEventListener('click', () => {
+    dashboard.classList.remove('hidden');
+    loginForm.classList.add('hidden');
+    signupForm.classList.add('hidden');
+});
+
+loginLink.addEventListener('click', () => {
+    dashboard.classList.add('hidden');
+    loginForm.classList.remove('hidden');
+    signupForm.classList.add('hidden');
+});
+
+signupLink.addEventListener('click', () => {
+    dashboard.classList.add('hidden');
+    loginForm.classList.add('hidden');
+    signupForm.classList.remove('hidden');
+});
+
+
+
+
 chrome.storage.sync.get('token', (result) => {
     const token = result.token;
     fetch('http://127.0.0.1:3000/browsing_times', {
@@ -42,24 +64,7 @@ chrome.storage.sync.get('token', (result) => {
             // Handle the error here, such as showing an error message to the user.
         });
 });
-// Show/hide different sections
-dashboardLink.addEventListener('click', () => {
-    dashboard.classList.remove('hidden');
-    loginForm.classList.add('hidden');
-    signupForm.classList.add('hidden');
-});
 
-loginLink.addEventListener('click', () => {
-    dashboard.classList.add('hidden');
-    loginForm.classList.remove('hidden');
-    signupForm.classList.add('hidden');
-});
-
-signupLink.addEventListener('click', () => {
-    dashboard.classList.add('hidden');
-    loginForm.classList.add('hidden');
-    signupForm.classList.remove('hidden');
-});
 
 
 
