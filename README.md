@@ -18,4 +18,4 @@ Web Tracker is a browser extension that helps you monitor and manage your time s
 10. You can now use this extension locally.
 
 ## Flow Graph
- ![Example Image](images/example.jpg)
+ ![Example Image](flowgraph.jpg)
