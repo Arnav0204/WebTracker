@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Tracker</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Website Tracker</h1>
+        <div class="stats">
+            <p>Total Time Spent Today:</p>
+            <p id="totalTime">0 minutes</p>
+        </div>
+        <div class="websites-visited">
+            <ul id="visited-websites"></ul>
+        </div>
+        <div class="websites-restricted">
+            <input type="text" id="restricted-website-input">
+            <input type="number" id="timeLimit" placeholder="Time limit (minutes)">
+            <button id="add-restriction">Add</button>
+            <ul id="restricted-websites"></ul>
+        </div>
+        <div class="websites-blocked">
+            <input type="text" id="blocked-website-input">
+            <button id="add-block">Add</button>
+            <ul id="blocked-websites"></ul>
+        </div>
+    </div>
+    <script src=" popup.js"></script>
+</body>
+
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy"
+        content="connect-src chrome://resources chrome://theme 'self' http://127.0.0.1:3000"> -->
+
+    <title>Chrome Extension Dashboard</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="dashboard-link">Dashboard</a></li>
+                <li><a href="#" id="login-link">Login</a></li>
+                <li><a href="#" id="signup-link">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="dashboard" class="hidden">
+            <h1>Dashboard</h1>
+            <div id="browsing-data">
+                <button id="browsing-data-button">show stats</button>
+                <ul id="browsing-data-list"></ul>
+            </div>
+            <div id="restricted-list"></div>
+            <div id="blocked-categories">
+                <input type="url" placeholder="enter websites to be blocked" id="blocked-website-input">
+                <button id="blocked-website-button">save</button>
+            </div>
+        </div>
+
+        <div id="login-form" class="hidden">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email" required id="login-email">
+                <input type="password" placeholder="Password" required id="login-password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div id="signup-form" class="hidden">
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" placeholder="name" required id="register-name">
+                <input type="text" placeholder="username" required id="register-username">
+                <input type="email" placeholder="Email" required id="register-email">
+                <input type="password" placeholder="Password" required id="register-password">
+                <input type="password" placeholder="confirm Password" required id="register-confirmpassword">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
