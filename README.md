@@ -19,3 +19,9 @@ Web Tracker is a browser extension that helps you monitor and manage your time s
 
 ## Flow Graph
 ![flowgraph](https://github.com/Arnav0204/Elitmus-project/assets/126781327/937e9cc1-be79-40e5-bcf9-1154323ba90e)
+
+## Demo video
+
+https://github.com/Arnav0204/Elitmus-project/assets/126781327/c1ff6efb-6cb3-44bc-838d-d9a7597f0ff2
+
+
