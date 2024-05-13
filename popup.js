@@ -206,29 +206,32 @@ loginForm.addEventListener('submit', (event) => {
         });
 });
 
+
 blockedWebsiteButton.addEventListener('click', (event) => {
     event.preventDefault();
-    userData = {
-        "hostname": blockedWebsiteInput.value
-    }
-    const token = localStorage.getItem('token');
-    fetch('http://127.0.0.1:3000/blocked_hosts', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + token
-        },
-        body: JSON.stringify(userData)
-    })
-        .then(response => {
-            if (response.ok) {
-                alert(blockedWebsiteInput.value + 'blocked');
-            } else {
-                alert('failed to block given website');
-                blockedWebsiteInput.value = "";
-            }
+    chrome.storage.sync.get('token', (data) => {
+        userData = {
+            "hostname": blockedWebsiteInput.value
+        }
+        const token = data.token;
+        fetch('http://127.0.0.1:3000/blocked_hosts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+            },
+            body: JSON.stringify(userData)
         })
-        .catch(error => {
-            alert('Error:' + error);
-        });
+            .then(response => {
+                if (response.ok) {
+                    alert(blockedWebsiteInput.value + 'blocked');
+                } else {
+                    alert('failed to block given website');
+                    blockedWebsiteInput.value = "";
+                }
+            })
+            .catch(error => {
+                alert('Error:' + error);
+            });
+    })
 })
